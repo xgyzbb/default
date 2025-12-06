@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- Mobile Optimization Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#2C3E50" />
+    <meta name="format-detection" content="telephone=no" />
+    
+    <title>广州黄埔 ⇋ 香港轻装特种兵攻略</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2C3E50',
+                        accent: '#C05621',
+                        teal: '#2C7A7B',
+                        sand: '#F5F5F0',
+                        surface: '#FFFFFF',
+                        muted: '#718096',
+                    },
+                    fontFamily: {
+                        serif: ['"Times New Roman"', 'Times', 'serif'],
+                        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+                    },
+                    spacing: {
+                        'safe-top': 'env(safe-area-inset-top)',
+                        'safe-bottom': 'env(safe-area-inset-bottom)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #F5F5F0;
+            color: #2D3748;
+            /* Safe area handling */
+            padding-top: env(safe-area-inset-top);
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .timeline-line {
+            position: absolute;
+            left: 20px; /* Adjusted for mobile */
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #E2E8F0;
+            z-index: 0;
+        }
+        @media (min-width: 768px) {
+            .timeline-line {
+                left: 24px;
+            }
+        }
+        .timeline-dot {
+            z-index: 10;
+        }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 4px; /* Thinner on mobile */
+            height: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F5F5F0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E0;
+            border-radius: 4px;
+        }
+        /* Icon sizing */
+        .icon {
+            width: 1.2em;
+            height: 1.2em;
+            fill: currentColor;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-lg {
+            width: 1.5em;
+            height: 1.5em;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-teal-100 selection:text-teal-900">
+
+    <!-- Hero Section -->
+    <header class="relative min-h-[50vh] md:h-96 flex items-center justify-center overflow-hidden bg-primary pb-12 pt-safe-top">
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-800 opacity-90 z-10"></div>
+        <!-- Abstract Background Pattern -->
+        <div class="absolute inset-0 opacity-20 z-0" style="background-image: radial-gradient(#4A5568 1px, transparent 1px); background-size: 20px 20px;"></div>
+        
+        <div class="relative z-20 text-center px-4 max-w-4xl mx-auto py-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white/80 text-sm mb-4 backdrop-blur-sm border border-white/10">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> 
+                广州黄埔 
+                <svg class="icon mx-1" viewBox="0 0 24 24"><path d="M16.05 12.05L21 17l-4.95 4.95-1.414-1.414 2.536-2.536H9v-2h8.172l-2.536-2.536 1.414-1.414zm-8.1-10l1.414 1.414L6.828 6H15v2H6.828l2.536 2.536L7.95 11.95 3 7l4.95-4.95z"/></svg> 
+                香港
+            </div>
+            <h1 class="text-3xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight tracking-tight">
+                轻装特种兵<br/><span class="text-teal-400">两日极速攻略</span>
+            </h1>
+            <div class="flex flex-wrap justify-center gap-3 text-white/90 font-medium text-sm md:text-base">
+                <div class="flex items-center gap-2 bg-white/10 px-3 py-2 rounded-lg backdrop-blur-sm">
+                    <svg class="icon text-teal-400" viewBox="0 0 24 24"><path d="M17 3h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1h2v2h6V1h2v2zm-2 2H9v2H7V5H4v4h16V5h-3v2h-2V5zm5 6H4v8h16v-8z"/></svg>
+                    2天1夜
+                </div>
+                <div class="flex items-center gap-2 bg-white/10 px-3 py-2 rounded-lg backdrop-blur-sm">
+                    <svg class="icon text-teal-400" viewBox="0 0 24 24"><path d="M22 11v9h-2v-3H4v3H2V4h2v10h8V7h6a4 4 0 0 1 4 4z"/></svg>
+                    油麻地东南楼
+                </div>
+                <div class="flex items-center gap-2 bg-white/10 px-3 py-2 rounded-lg backdrop-blur-sm">
+                    <svg class="icon text-teal-400" viewBox="0 0 24 24"><path d="M17 20H7v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1H3v-8H2V8h1V5a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v3h1v4h-1v8h-1a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1zM6 5v4h12V5a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm0 6v7h12v-7H6zm1.5 2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm9 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/></svg>
+                    直通巴往返
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-4 py-8 -mt-12 relative z-30 pb-safe-bottom">
+        
+        <!-- Day 1 -->
+        <section class="mb-12">
+            <div class="flex items-center gap-4 mb-6 sticky top-0 bg-[#F5F5F0]/95 backdrop-blur-sm py-4 z-20 border-b border-gray-200/50">
+                <div class="bg-teal-600 text-white w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center shadow-lg shadow-teal-600/20 text-lg md:text-xl font-bold shrink-0">D1</div>
+                <div>
+                    <h2 class="text-xl md:text-2xl font-serif font-bold text-gray-900">迪士尼狂欢</h2>
+                    <p class="text-muted text-xs md:text-sm">12月9日 · 奇妙梦幻之旅</p>
+                </div>
+            </div>
+
+            <div class="relative pl-10 md:pl-12 space-y-6">
+                <div class="timeline-line"></div>
+
+                <!-- Item 1 -->
+                <div class="relative group">
+                    <div class="timeline-dot absolute -left-[31px] md:-left-[35px] top-1 w-5 h-5 md:w-6 md:h-6 rounded-full bg-white border-4 border-teal-500 shadow-sm group-hover:scale-110 transition-transform duration-300"></div>
+                    <div class="glass-card p-4 md:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-teal-500">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-2">
+                            <div class="flex items-center gap-2 text-teal-700 font-bold text-sm md:text-base">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-8h4v2h-6V7h2v5z"/></svg>
+                                07:30 - 11:00
+                            </div>
+                            <span class="inline-flex items-center gap-1 px-2 py-1 rounded bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider w-fit">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M17 20H7v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1H3v-8H2V8h1V5a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v3h1v4h-1v8h-1a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1zM6 5v4h12V5a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm0 6v7h12v-7H6zm1.5 2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm9 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/></svg>
+                                直通巴
+                            </span>
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold text-gray-900 mb-2">出发：广州黄埔 ➔ 迪士尼</h3>
+                        <p class="text-gray-600 mb-3 text-sm md:text-base">黄埔宝能 / 大沙地上车，直达香港迪士尼乐园。</p>
+                        <div class="flex items-center gap-2 text-xs md:text-sm font-medium text-accent bg-orange-50 w-fit px-3 py-1 rounded-full">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-8h3v2h-3v3h-2v-3H8v-2h3V9H8V7h3V4h2v3h3v2h-3v3z"/></svg>
+                            ¥145/人
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="relative group">
+                    <div class="timeline-dot absolute -left-[31px] md:-left-[35px] top-1 w-5 h-5 md:w-6 md:h-6 rounded-full bg-white border-4 border-purple-500 shadow-sm group-hover:scale-110 transition-transform duration-300"></div>
+                    <div class="glass-card p-4 md:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-purple-500">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-2">
+                            <div class="flex items-center gap-2 text-purple-700 font-bold text-sm md:text-base">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-8h4v2h-6V7h2v5z"/></svg>
+                                11:00 - 20:30
+                            </div>
+                            <span class="inline-flex items-center gap-1 px-2 py-1 rounded bg-purple-50 text-purple-600 text-xs font-bold uppercase tracking-wider w-fit">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"/></svg>
+                                游玩
+                            </span>
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold text-gray-900 mb-2">迪士尼乐园全天游玩</h3>
+                        <p class="text-gray-600 mb-3 text-sm md:text-base">全天沉浸式游玩，建议自带干粮。晚上 20:30 准时观看城堡烟花秀。</p>
+                        <div class="flex items-center gap-2 text-xs md:text-sm font-medium text-accent bg-orange-50 w-fit px-3 py-1 rounded-full">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M15.414 5h5.586c.552 0 1 .448 1 1v12c0 .552-.448 1-1 1h-5.586A5.985 5.985 0 0 0 15 15c0-1.657.672-3.157 1.757-4.243A5.985 5.985 0 0 0 15.414 5zM8.586 19H3c-.552 0-1-.448-1-1V6c0-.552.448-1 1-1h5.586A5.985 5.985 0 0 0 9 9c0 1.657-.672 3.157-1.757 4.243A5.985 5.985 0 0 0 8.586 19z"/></svg>
+                            门票：¥940 (双人)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="relative group">
+                    <div class="timeline-dot absolute -left-[31px] md:-left-[35px] top-1 w-5 h-5 md:w-6 md:h-6 rounded-full bg-white border-4 border-indigo-500 shadow-sm group-hover:scale-110 transition-transform duration-300"></div>
+                    <div class="glass-card p-4 md:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-indigo-500">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-2">
+                            <div class="flex items-center gap-2 text-indigo-700 font-bold text-sm md:text-base">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-8h4v2h-6V7h2v5z"/></svg>
+                                21:00 - 22:00
+                            </div>
+                            <span class="inline-flex items-center gap-1 px-2 py-1 rounded bg-indigo-50 text-indigo-600 text-xs font-bold uppercase tracking-wider w-fit">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M17.2 20l1.8 1.5v.5H5v-.5L6.8 20H5a2 2 0 0 1-2-2V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v11a2 2 0 0 1-2 2h-1.8zM5 7v4h14V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2zm0 6v5h14v-5H5zm3 1.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm8 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/></svg>
+                                港铁 MTR
+                            </span>
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold text-gray-900 mb-2">前往酒店：油麻地</h3>
+                        <div class="bg-gray-50 p-3 rounded-lg mb-3 text-xs md:text-sm text-gray-700 border border-gray-100">
+                            <span class="font-bold">路线：</span> 迪士尼 ➔ 欣澳 ➔ 荔景 ➔ 油麻地 (A1出口)
+                        </div>
+                        <p class="text-gray-600 mb-3 text-sm md:text-base">入住 <strong>东南楼艺术酒店</strong>，体验复古艺术氛围。</p>
+                        <div class="flex items-center gap-2 text-xs md:text-sm font-medium text-accent bg-orange-50 w-fit px-3 py-1 rounded-full">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M22 11v9h-2v-3H4v3H2V4h2v10h8V7h6a4 4 0 0 1 4 4z"/></svg>
+                            住宿：¥732
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Day 2 -->
+        <section class="mb-16">
+            <div class="flex items-center gap-4 mb-6 sticky top-0 bg-[#F5F5F0]/95 backdrop-blur-sm py-4 z-20 border-b border-gray-200/50">
+                <div class="bg-teal-600 text-white w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center shadow-lg shadow-teal-600/20 text-lg md:text-xl font-bold shrink-0">D2</div>
+                <div>
+                    <h2 class="text-xl md:text-2xl font-serif font-bold text-gray-900">九龙扫街 ➔ 港岛漫游</h2>
+                    <p class="text-muted text-xs md:text-sm">12月10日 · 城市人文探索</p>
+                </div>
+            </div>
+
+            <div class="relative pl-10 md:pl-12 space-y-6">
+                <div class="timeline-line"></div>
+
+                <!-- Item 1 -->
+                <div class="relative group">
+                    <div class="timeline-dot absolute -left-[31px] md:-left-[35px] top-1 w-5 h-5 md:w-6 md:h-6 rounded-full bg-white border-4 border-gray-400 shadow-sm group-hover:scale-110 transition-transform duration-300"></div>
+                    <div class="glass-card p-4 md:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-2">
+                            <div class="flex items-center gap-2 text-gray-700 font-bold text-sm md:text-base">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-8h4v2h-6V7h2v5z"/></svg>
+                                10:00 - 10:30
+                            </div>
+                            <span class="inline-flex items-center gap-1 px-2 py-1 rounded bg-gray-100 text-gray-600 text-xs font-bold uppercase tracking-wider w-fit">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7z"/></svg>
+                                步行
+                            </span>
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold text-gray-900 mb-2">退房 & 周边打卡</h3>
+                        <p class="text-gray-600 text-sm md:text-base">睡个懒觉退房，背着双肩包出发（不寄存）。打卡酒店周边的 <strong>红砖屋</strong> 和 <strong>天后庙</strong>。</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="relative group">
+                    <div class="timeline-dot absolute -left-[31px] md:-left-[35px] top-1 w-5 h-5 md:w-6 md:h-6 rounded-full bg-white border-4 border-red-500 shadow-sm group-hover:scale-110 transition-transform duration-300"></div>
+                    <div class="glass-card p-4 md:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-red-500">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-2">
+                            <div class="flex items-center gap-2 text-red-700 font-bold text-sm md:text-base">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-8h4v2h-6V7h2v5z"/></svg>
+                                10:30 - 13:30
+                            </div>
+                            <span class="inline-flex items-center gap-1 px-2 py-1 rounded bg-red-50 text-red-600 text-xs font-bold uppercase tracking-wider w-fit">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                                City Walk
+                            </span>
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold text-gray-900 mb-2">旺角/油麻地 扫街 & 午餐</h3>
+                        <p class="text-gray-600 mb-3 text-sm md:text-base">沿弥敦道北行，感受九龙烟火气。</p>
+                        <ul class="list-disc list-inside text-gray-600 text-xs md:text-sm space-y-1 mb-4 bg-gray-50 p-3 rounded-lg">
+                            <li><strong>油麻地警署：</strong> TVB 经典打卡点</li>
+                            <li><strong>金鱼街/上海街：</strong> 地道市井风情</li>
+                            <li><strong>午餐推荐：</strong> 金华冰厅 (菠萝油) 或 一点心</li>
+                        </ul>
+                        <div class="flex items-center gap-2 text-xs md:text-sm font-medium text-accent bg-orange-50 w-fit px-3 py-1 rounded-full">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M21 2v20h-2v-7h-4V8a6 6 0 0 1 6-6zm-8 16V2h-2v20H9V7H7v13H5V7H3v13H1V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v11h2z"/></svg>
+                            餐饮：约 ¥60/人
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="relative group">
+                    <div class="timeline-dot absolute -left-[31px] md:-left-[35px] top-1 w-5 h-5 md:w-6 md:h-6 rounded-full bg-white border-4 border-blue-500 shadow-sm group-hover:scale-110 transition-transform duration-300"></div>
+                    <div class="glass-card p-4 md:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-blue-500">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-2">
+                            <div class="flex items-center gap-2 text-blue-700 font-bold text-sm md:text-base">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-8h4v2h-6V7h2v5z"/></svg>
+                                13:30 - 15:30
+                            </div>
+                            <span class="inline-flex items-center gap-1 px-2 py-1 rounded bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider w-fit">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M3.002 18.256c-.002.081-.002.163-.002.244 0 2.485 4.477 4.5 10 4.5s10-2.015 10-4.5c0-.081 0-.163-.002-.244l-2.08-8.256H4.082l-1.08 8.256zm1.955-10.256h15.086l1.03 4.088C20.416 11.52 19.256 11 18 11c-2.485 0-4.5 2.015-4.5 4.5v.5h-2v-.5c0-2.485-2.015-4.5-4.5-4.5-1.256 0-2.416.52-3.073 1.088l1.03-4.088zM12 2a2 2 0 0 1 2 2v3h-4V4a2 2 0 0 1 2-2z"/></svg>
+                                过海 & 中环
+                            </span>
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold text-gray-900 mb-2">地铁过海 ➔ 中环漫步</h3>
+                        <p class="text-gray-600 mb-3 text-sm md:text-base">旺角站直达中环站 (D2出口)。打卡石板街、半山扶梯、大馆。累了去兰芳园喝杯奶茶。</p>
+                        <div class="flex items-center gap-2 text-xs md:text-sm font-medium text-accent bg-orange-50 w-fit px-3 py-1 rounded-full">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M15.414 5h5.586c.552 0 1 .448 1 1v12c0 .552-.448 1-1 1h-5.586A5.985 5.985 0 0 0 15 15c0-1.657.672-3.157 1.757-4.243A5.985 5.985 0 0 0 15.414 5zM8.586 19H3c-.552 0-1-.448-1-1V6c0-.552.448-1 1-1h5.586A5.985 5.985 0 0 0 9 9c0 1.657-.672 3.157-1.757 4.243A5.985 5.985 0 0 0 8.586 19z"/></svg>
+                            交通：约 ¥12
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="relative group">
+                    <div class="timeline-dot absolute -left-[31px] md:-left-[35px] top-1 w-5 h-5 md:w-6 md:h-6 rounded-full bg-white border-4 border-green-600 shadow-sm group-hover:scale-110 transition-transform duration-300"></div>
+                    <div class="glass-card p-4 md:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-green-600">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-2">
+                            <div class="flex items-center gap-2 text-green-700 font-bold text-sm md:text-base">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-8h4v2h-6V7h2v5z"/></svg>
+                                15:30 - 16:15
+                            </div>
+                            <span class="inline-flex items-center gap-1 px-2 py-1 rounded bg-green-50 text-green-600 text-xs font-bold uppercase tracking-wider w-fit">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M17.2 20l1.8 1.5v.5H5v-.5L6.8 20H5a2 2 0 0 1-2-2V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v11a2 2 0 0 1-2 2h-1.8zM5 7v4h14V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2zm0 6v5h14v-5H5zm3 1.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm8 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/></svg>
+                                叮叮车
+                            </span>
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold text-gray-900 mb-2">电车体验：中环 ➔ 湾仔</h3>
+                        <p class="text-gray-600 mb-3 text-sm md:text-base">德辅道中上车，二层车头看风景。在柯布连道或汕头街下车。</p>
+                        <div class="flex items-center gap-2 text-xs md:text-sm font-medium text-accent bg-orange-50 w-fit px-3 py-1 rounded-full">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-8h3v2h-3v3h-2v-3H8v-2h3V9H8V7h3V4h2v3h3v2h-3v3z"/></svg>
+                            费用：约 ¥2.8
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="relative group">
+                    <div class="timeline-dot absolute -left-[31px] md:-left-[35px] top-1 w-5 h-5 md:w-6 md:h-6 rounded-full bg-white border-4 border-yellow-500 shadow-sm group-hover:scale-110 transition-transform duration-300"></div>
+                    <div class="glass-card p-4 md:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-yellow-500">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-2">
+                            <div class="flex items-center gap-2 text-yellow-700 font-bold text-sm md:text-base">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-8h4v2h-6V7h2v5z"/></svg>
+                                16:15 - 20:00
+                            </div>
+                            <span class="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-50 text-yellow-600 text-xs font-bold uppercase tracking-wider w-fit">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M9 3L7.17 5H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3.17L15 3H9zm3 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+                                湾仔 & 维港
+                            </span>
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold text-gray-900 mb-2">湾仔漫游 ➔ 天星小轮 ➔ 尖沙咀</h3>
+                        <p class="text-gray-600 mb-3 text-sm md:text-base">逛利东街，吃甘牌烧鹅/再兴烧腊。步行至湾仔码头乘天星小轮赏维港日落。</p>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="flex items-center gap-2 text-xs md:text-sm font-medium text-accent bg-orange-50 w-fit px-3 py-1 rounded-full">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M21 2v20h-2v-7h-4V8a6 6 0 0 1 6-6zm-8 16V2h-2v20H9V7H7v13H5V7H3v13H1V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v11h2z"/></svg>
+                                晚餐：约 ¥80
+                            </div>
+                            <div class="flex items-center gap-2 text-xs md:text-sm font-medium text-accent bg-orange-50 w-fit px-3 py-1 rounded-full">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M3.002 18.256c-.002.081-.002.163-.002.244 0 2.485 4.477 4.5 10 4.5s10-2.015 10-4.5c0-.081 0-.163-.002-.244l-2.08-8.256H4.082l-1.08 8.256zm1.955-10.256h15.086l1.03 4.088C20.416 11.52 19.256 11 18 11c-2.485 0-4.5 2.015-4.5 4.5v.5h-2v-.5c0-2.485-2.015-4.5-4.5-4.5-1.256 0-2.416.52-3.073 1.088l1.03-4.088zM12 2a2 2 0 0 1 2 2v3h-4V4a2 2 0 0 1 2-2z"/></svg>
+                                轮渡：约 ¥4.6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="relative group">
+                    <div class="timeline-dot absolute -left-[31px] md:-left-[35px] top-1 w-5 h-5 md:w-6 md:h-6 rounded-full bg-white border-4 border-gray-800 shadow-sm group-hover:scale-110 transition-transform duration-300"></div>
+                    <div class="glass-card p-4 md:p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-gray-800">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2 gap-2">
+                            <div class="flex items-center gap-2 text-gray-800 font-bold text-sm md:text-base">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-8h4v2h-6V7h2v5z"/></svg>
+                                20:30
+                            </div>
+                            <span class="inline-flex items-center gap-1 px-2 py-1 rounded bg-gray-100 text-gray-800 text-xs font-bold uppercase tracking-wider w-fit">
+                                <svg class="icon" viewBox="0 0 24 24"><path d="M20 20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9zM8 15v4h8v-4H8z"/></svg>
+                                返程
+                            </span>
+                        </div>
+                        <h3 class="text-base md:text-lg font-bold text-gray-900 mb-2">中港城 ➔ 广州黄埔</h3>
+                        <p class="text-gray-600 mb-3 text-sm md:text-base">中港城地下巴士站上车，永东直通巴直达宝能演艺中心。</p>
+                        <div class="flex items-center gap-2 text-xs md:text-sm font-medium text-accent bg-orange-50 w-fit px-3 py-1 rounded-full">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M17 20H7v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1H3v-8H2V8h1V5a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v3h1v4h-1v8h-1a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1zM6 5v4h12V5a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm0 6v7h12v-7H6zm1.5 2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm9 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/></svg>
+                            费用：约 ¥110
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Cost Summary -->
+        <section class="mb-12">
+            <h2 class="text-xl md:text-2xl font-serif font-bold text-gray-900 mb-6 flex items-center gap-2">
+                <svg class="icon text-teal-600" viewBox="0 0 24 24"><path d="M22 7h1v10h-1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v3zm-2 10h-6a5 5 0 0 1 0-10h6V5H4v14h16v-2zm1-2V9h-7a3 3 0 0 0 0 6h7zm-4-3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>
+                最终费用明细 (2人)
+            </h2>
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse min-w-[300px]">
+                        <thead>
+                            <tr class="bg-gray-50 border-b border-gray-100">
+                                <th class="p-3 md:p-4 font-bold text-gray-600 text-xs md:text-sm uppercase tracking-wider whitespace-nowrap">项目</th>
+                                <th class="p-3 md:p-4 font-bold text-gray-600 text-xs md:text-sm uppercase tracking-wider">明细</th>
+                                <th class="p-3 md:p-4 font-bold text-gray-600 text-xs md:text-sm uppercase tracking-wider text-right whitespace-nowrap">金额 (RMB)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-50">
+                            <tr class="hover:bg-gray-50/50 transition-colors">
+                                <td class="p-3 md:p-4 font-medium text-gray-900 text-sm md:text-base whitespace-nowrap">
+                                    <svg class="icon mr-1 md:mr-2 text-teal-500" viewBox="0 0 24 24"><path d="M15.414 5h5.586c.552 0 1 .448 1 1v12c0 .552-.448 1-1 1h-5.586A5.985 5.985 0 0 0 15 15c0-1.657.672-3.157 1.757-4.243A5.985 5.985 0 0 0 15.414 5zM8.586 19H3c-.552 0-1-.448-1-1V6c0-.552.448-1 1-1h5.586A5.985 5.985 0 0 0 9 9c0 1.657-.672 3.157-1.757 4.243A5.985 5.985 0 0 0 8.586 19z"/></svg>
+                                    门票
+                                </td>
+                                <td class="p-3 md:p-4 text-gray-600 text-sm md:text-base">迪士尼双人票</td>
+                                <td class="p-3 md:p-4 text-gray-900 font-mono text-right text-sm md:text-base">940</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition-colors">
+                                <td class="p-3 md:p-4 font-medium text-gray-900 text-sm md:text-base whitespace-nowrap">
+                                    <svg class="icon mr-1 md:mr-2 text-teal-500" viewBox="0 0 24 24"><path d="M22 11v9h-2v-3H4v3H2V4h2v10h8V7h6a4 4 0 0 1 4 4z"/></svg>
+                                    住宿
+                                </td>
+                                <td class="p-3 md:p-4 text-gray-600 text-sm md:text-base">东南楼艺术酒店 (1晚)</td>
+                                <td class="p-3 md:p-4 text-gray-900 font-mono text-right text-sm md:text-base">732</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition-colors">
+                                <td class="p-3 md:p-4 font-medium text-gray-900 text-sm md:text-base whitespace-nowrap">
+                                    <svg class="icon mr-1 md:mr-2 text-teal-500" viewBox="0 0 24 24"><path d="M17 20H7v1a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1H3v-8H2V8h1V5a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v3h1v4h-1v8h-1a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1zM6 5v4h12V5a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm0 6v7h12v-7H6zm1.5 2a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm9 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/></svg>
+                                    交通
+                                </td>
+                                <td class="p-3 md:p-4 text-gray-600 text-sm md:text-base">黄埔 ⇋ 香港 (直通巴)</td>
+                                <td class="p-3 md:p-4 text-gray-900 font-mono text-right text-sm md:text-base">510</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition-colors">
+                                <td class="p-3 md:p-4 font-medium text-gray-900 text-sm md:text-base whitespace-nowrap">
+                                    <svg class="icon mr-1 md:mr-2 text-teal-500" viewBox="0 0 24 24"><path d="M17.2 20l1.8 1.5v.5H5v-.5L6.8 20H5a2 2 0 0 1-2-2V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v11a2 2 0 0 1-2 2h-1.8zM5 7v4h14V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2zm0 6v5h14v-5H5zm3 1.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm8 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/></svg>
+                                    市内交通
+                                </td>
+                                <td class="p-3 md:p-4 text-gray-600 text-sm md:text-base">地铁、巴士、船、电车</td>
+                                <td class="p-3 md:p-4 text-gray-900 font-mono text-right text-sm md:text-base">80</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition-colors">
+                                <td class="p-3 md:p-4 font-medium text-gray-900 text-sm md:text-base whitespace-nowrap">
+                                    <svg class="icon mr-1 md:mr-2 text-teal-500" viewBox="0 0 24 24"><path d="M21 2v20h-2v-7h-4V8a6 6 0 0 1 6-6zm-8 16V2h-2v20H9V7H7v13H5V7H3v13H1V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v11h2z"/></svg>
+                                    餐饮
+                                </td>
+                                <td class="p-3 md:p-4 text-gray-600 text-sm md:text-base">Day1干粮 + Day2午晚餐</td>
+                                <td class="p-3 md:p-4 text-gray-900 font-mono text-right text-sm md:text-base">350</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50/50 transition-colors">
+                                <td class="p-3 md:p-4 font-medium text-gray-900 text-sm md:text-base whitespace-nowrap">
+                                    <svg class="icon mr-1 md:mr-2 text-teal-500" viewBox="0 0 24 24"><path d="M12 3c3.46 0 6.72 1.15 9.38 3.08l-1.32 1.6A12.93 12.93 0 0 0 12 5c-2.9 0-5.62.97-7.86 2.6L2.8 6.02A14.93 14.93 0 0 1 12 3zm0 4c2.56 0 4.96.85 6.92 2.28l-1.32 1.6A8.95 8.95 0 0 0 12 9c-1.94 0-3.76.63-5.26 1.7L5.4 9.08A10.94 10.94 0 0 1 12 7zm0 4c1.66 0 3.2.55 4.46 1.48l-1.32 1.6A4.97 4.97 0 0 0 12 13c-1.1 0-2.13.35-3.02.94l-1.3-1.58A6.94 6.94 0 0 1 12 11zm0 4c.76 0 1.44.25 2 .68l-2 2.42-2-2.42A3.03 3.03 0 0 1 12 15z"/></svg>
+                                    杂费
+                                </td>
+                                <td class="p-3 md:p-4 text-gray-600 text-sm md:text-base">流量包</td>
+                                <td class="p-3 md:p-4 text-gray-900 font-mono text-right text-sm md:text-base">40</td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="bg-teal-50 border-t border-teal-100">
+                            <tr>
+                                <td class="p-3 md:p-4 font-bold text-teal-900 text-sm md:text-base">总计</td>
+                                <td class="p-3 md:p-4 text-teal-700 text-xs md:text-sm">人均约 ¥1,326</td>
+                                <td class="p-3 md:p-4 font-bold text-teal-900 font-mono text-lg md:text-xl text-right">¥2,652</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center text-gray-400 text-xs md:text-sm pb-safe-bottom">
+            <p>© 2025 广州黄埔 ⇋ 香港特种兵攻略 | Designed with <svg class="icon text-red-400" viewBox="0 0 24 24"><path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228z"/></svg></p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
