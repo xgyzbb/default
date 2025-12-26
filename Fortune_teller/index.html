@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 新一年运势抽取器 | 探索你的未来</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="stars-container" id="stars-container"></div>
+    <div class="nebula"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="title">新一年运势抽取</h1>
+            <p class="subtitle">—— 拨开迷雾，窥见未来的指引 ——</p>
+        </header>
+
+        <main>
+            <div class="card-wrapper">
+                <div class="card" id="fortune-card">
+                    <div class="card-face card-back">
+                        <!-- 只有背面，翻转后显示正面 -->
+                        <div class="card-inner-pattern"></div>
+                    </div>
+                    <div class="card-face card-front">
+                        <div class="fortune-content">
+                            <div class="fortune-item">
+                                <span class="label">✨ 今日启示：</span>
+                                <p id="main-fortune">点击翻转查看</p>
+                            </div>
+                            <div class="toxic-soup-container">
+                                <span class="label">� 现实提醒：</span>
+                                <p id="toxic-soup" class="toxic-soup">生活不只有眼前的苟且...</p>
+                            </div>
+                        </div>
+                        <button id="reset-btn" class="reset-btn">再抽一次</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hint" id="click-hint">点击卡片，开启你的 2026</div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
