@@ -1,16 +1,26 @@
-# Node modules (if you add them later)
-node_modules/
-
-# OS files
+# 操作系统
 .DS_Store
 Thumbs.db
-
-# Editor directories and files
-.vscode/
-.idea/
 *.swp
 *.swo
 *~
 
-# Temporary files
+# 编辑器
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 依赖和构建
+node_modules/
 *.log
+.env
+.env.local
+
+# IDE
+.project
+.classpath
+
+# 临时文件
+*.tmp
+*.temp
